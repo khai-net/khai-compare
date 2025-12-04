@@ -2,13 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <bson/bson.h>
-
-typedef struct {
-    char *control_collection;
-    char *treated_collection;
-    char *marker_name;
-    int has_marker;
-} AnalysisInput;
+#include "analysis_input_parser.h"
 
 /**
  * Free the analysis input structure
