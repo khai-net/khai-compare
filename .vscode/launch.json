@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++ Debug: khai-compare (Cell comparison)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/khai-compare",
+            "args": ["./Examples/Test-input.json"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build",
+            "MIMode": "lldb"
+        },
+        {
+            "name": "C/C++ Release: khai-compare (Cell Simulation)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/khai-compare",
+            "args": ["./Examples/Test-input.json"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build release",
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Run Unit Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/tests/test_runner",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "launch-tests",
+            "MIMode": "lldb"
+        },
+        {
+            "name": "Debug with Sanitizers",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/khai-compare",
+            "args": ["-think-list", "./Examples/cell-simulation.json"],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "build with sanitizers",
+            "MIMode": "lldb",
+            "externalConsole": true,
+            "environment": [
+                { "name": "ASAN_OPTIONS", "value": "detect_leaks=0:abort_on_error=0" },
+                { "name": "UBSAN_OPTIONS", "value": "print_stacktrace=1:halt_on_error=0" },
+                { "name": "MallocScribble", "value": "1" },
+                { "name": "MallocGuardEdges", "value": "1" }
+            ]
+        }
+    ]
+}

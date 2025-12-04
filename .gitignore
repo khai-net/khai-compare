@@ -1,0 +1,102 @@
+###########################
+# macOS filesystem noise
+###########################
+.DS_Store
+
+
+###########################
+# Xcode
+###########################
+# Build products
+build/
+DerivedData/
+
+# Per–user Xcode data
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.xcuserstate
+*.moved-aside
+
+# Xcode user-specific settings files
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Xcode auxiliary
+*.xcworkspace
+
+# Debug symbol bundles
+*.dSYM/
+
+
+###########################
+# VS Code
+###########################
+#.vscode/   -> we will share vscode settings for now
+.cache/
+.cache/clangd/
+.clangd/
+
+
+###########################
+# Compiler / build system artifacts
+###########################
+# clang / gcc
+*.o
+*.d
+*.a
+*.so
+*.dylib
+*.out
+*.log
+
+# CMake (if used now or later)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+
+###########################
+# Project-specific outputs
+###########################
+smartNet
+smartNet.zip
+third-party/        # created by build script
+khai-compare        # compiled binary
+output.json         # test output
+analysis-results/   # analysis input/output files
+
+###########################
+# Distribution / packaging
+###########################
+*.zip
+*.tar
+*.tar.gz
+*.pkg
+
+
+###########################
+# Code coverage
+###########################
+*.gcno
+*.gcda
+*.profdata
+
+
+###########################
+# Signing / certificates
+###########################
+SmartNetCertificateSigningRequest.certSigningRequest
+developer_id.*
+developerID_application.cer
+*.p12
+*.pem
+*.cer
+*.key
+*.mobileprovision

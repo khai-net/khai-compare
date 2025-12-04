@@ -1,0 +1,21 @@
+{
+    "C_Cpp.errorSquiggles": "Enabled",
+    "C_Cpp.intelliSenseEngine": "Enabled",
+    "files.associations": {
+        "*.ipynb": "ipython",
+        "ios": "c",
+        "format": "c",
+        "cmath": "c",
+        "checks.h": "c",
+        "ranges": "c",
+        "__bit_reference": "c",
+        "future": "c",
+        "string": "c",
+        "string_view": "c",
+        "bitset": "c",
+        "forward_list": "c",
+        "__locale": "c",
+        "array": "c"
+    }
+
+}
